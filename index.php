@@ -1,2 +1,3 @@
 <?php
-echo "Hola Finca";
+
+require "index.html";
