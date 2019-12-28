@@ -1,0 +1,28 @@
+.appearing-input {
+  animation-duration: 1s;
+  animation-name: appear;
+}
+.pressed-button {
+  animation: press 0.5 forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes press {
+  from {
+   
+  }
+
+  to {
+    transform:translate(4px,4px);
+    box-shadow: none;
+  }
+}

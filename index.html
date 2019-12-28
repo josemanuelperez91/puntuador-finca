@@ -5,11 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Puntuador Finca</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/effects.css">
+
 </head>
 
 <body>
-    Finca Online
+    <header>
+        <h1 class="standard-title">Puntuador Finca</h1>
+    </header>
+    <main>
+        <section id="title">
+            <article>
+                <h3 class="standard-title">Introducir Tiradores</h3>
+                <form method="post" id="numPlayerForm">
+                    <input class="standard-input" type="text" name="archers[]" required placeholder="Nombre">
+                    <button class="standard-button" id="newInput">Nuevo Jugador</button>
+                    <button class="standard-button" id="submit">Enviar</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <!-- <footer>
+    </footer> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

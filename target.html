@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puntuador Finca</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/target.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="node_modules\swiper\css\swiper.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="standard-title">Puntuador Finca</h1>
+    </header>
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <?php foreach ($targets as $index => $value): ?>
+                <div class="swiper-slide">
+
+                    <section class="target">
+                        <article>
+                            <div class="target-title"><?= $value ?></div>
+                            <div class="image-container">
+                                <img class="standard-image swiper-lazy" data-src="/res/targets/<?= $index ?>.jpg"
+                                    alt="">
+                            </div>
+                        </article>
+                    </section>
+                    <section class="score-buttons">
+                        <?php foreach ($_SESSION['archers'] as $index => $value): ?>
+                        <div class="score-title"><?= $value['name'] ?>:</div>
+                        <article class="button-score-bar" data-archer="<?= $index ?>">
+                            <button data-value="0" class="score-button">+0</button>
+                            <button data-value="5" class="score-button">+5</button>
+                            <button data-value="10" class="score-button">+10</button>
+                            <button data-value="11" class="score-button">+11</button>
+                            <button class="delete-button">Borrar</button>
+                        </article>
+                        <?php endforeach;?>
+
+                    </section>
+                    <div class="swiper-lazy-preloader">
+                    </div>
+                </div>
+                <?php endforeach;?>
+            </div>
+        </div>
+        </section>
+
+
+        <section id="archers">
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <td><b>Arquero</b></td>
+                        <td><b>Puntos</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php foreach ($_SESSION['archers'] as $index => $value): ?>
+                    <tr>
+                        <td>
+                            <?= $value['name']?>
+                        </td>
+                        <td id="archer-<?= $index ?>-total-score">
+                            <?= $value['points']?>
+                        </td>
+                    </tr>
+                    <?php endforeach;?>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="node_modules\swiper\js\swiper.min.js"></script>
+    <script src="js/score.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: false,
+            lazy: true,
+            loadPrevNext: true
+        })
+    </script>
+
+</body>
+
+</html>
