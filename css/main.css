@@ -15,14 +15,14 @@
   outline: none;
 }
 body {
+  height: calc(100vh - 30px);
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(to top, var(--claro), var(--oscuro));
+  background-repeat: no-repeat;
   color: var(--opaco);
   font-size: 1.2em;
 }
-main {
-  height: 100vh;
-}
+
 section {
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ section {
 }
 
 .standard-button {
-  width: calc(100vw - 20px);
+  width: 300px;
   margin: 10px 0px;
   padding: 10px 0px;
   border-radius: 5px;
@@ -52,7 +52,7 @@ section {
   margin-top: 5px;
 }
 .standard-input {
-  width: calc(100vw - 20px);
+  width: 300px;
   box-shadow: inset 1px 2px 4px 0px var(--opaco);
   border-width: 0;
   padding: 8px;
@@ -69,10 +69,21 @@ section {
   margin-top: -5px;
   box-shadow: inset 1px 0px 4px 0px var(--opaco);
 
-  width: calc(100vw - 20px);
+  width: 300px;
   background-color: var(--peligro);
   height: 20px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 480px) {
+  main {
+    max-width: 440px;
+    margin: 0px auto;
+    height: fit-content;
+    padding-bottom: 20px;
+    box-shadow:  1px 2px 4px 0px var(--opaco);
+  }
+ 
 }
