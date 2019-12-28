@@ -21,6 +21,7 @@ body {
   color: var(--opaco);
   font-size: 1.2em;
   height: 100%;
+  min-height: 100vh;
 }
 
 section {
