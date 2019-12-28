@@ -49,7 +49,7 @@ section.score-buttons {
   font-weight: bold;
 }
 .score-button {
-  min-width: 64px;
+  min-width: 56px;
   padding: 10px 0px;
   border-radius: 5px;
   background-color: var(--claro);
@@ -57,7 +57,9 @@ section.score-buttons {
   margin: 0px 5px 5px 5px;
 }
 .delete-button {
-  min-width: 64px;
+  margin: 0px 5px 5px 5px;
+
+  min-width: 56px;
   padding: 0 10px;
   height: 48px;
   border-radius: 5px;

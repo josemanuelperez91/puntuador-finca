@@ -37,10 +37,11 @@
                         <?php foreach ($_SESSION['archers'] as $index => $value): ?>
                         <div class="score-title"><?= $value['name'] ?>:</div>
                         <article class="button-score-bar" data-archer="<?= $index ?>">
-                            <button data-value="0" class="score-button">+0</button>
-                            <button data-value="5" class="score-button">+5</button>
-                            <button data-value="10" class="score-button">+10</button>
-                            <button data-value="11" class="score-button">+11</button>
+                            <button data-points="0" class="score-button">+0</button>
+                            <button data-points="5" class="score-button">+5</button>
+                            <button data-points="8" class="score-button">+5</button>
+                            <button data-points="10" class="score-button">+10</button>
+                            <button data-points="11" class="score-button">+11</button>
                             <button class="delete-button">Borrar</button>
                         </article>
                         <?php endforeach;?>
