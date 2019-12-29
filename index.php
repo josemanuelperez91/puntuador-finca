@@ -28,16 +28,17 @@ $targets = array(
  "23" => "tejones",
  "24" => "oso negro de lejos");
 
-if (sizeof($_POST['archers']) || sizeof($_SESSION['archers'])) {
+if ($_GET['archers']) {
 
- if (sizeof($_SESSION['archers'] == 0)) {
+ if (!$_SESSION['archers']) {
   $archers_array = [];
-  foreach ($_POST['archers'] as $value) {
+
+  foreach ($_GET['archers'] as $value) {
    array_push($archers_array, array("name" => $value, "points" => 0));
   }
+
   $_SESSION['archers'] = $archers_array;
  }
-
  require "target.html";
 
 } else {
