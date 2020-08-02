@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Anotador Tiro Con Arco</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/effects.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anotador Tiro</title>
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/effects.css">
-
-</head>
-
-<body>
+  <body>
     <header>
-        <h1 class="standard-title">Anotador de Tiros</h1>
+      <h1 class="standard-title">Anotador de Tiros</h1>
     </header>
     <main>
-        <section id="title">
-            <article>
-                <h3 class="standard-title">Introducir Tiradores</h3>
-                <form method="get" id="numPlayerForm">
-                    <input class="standard-input" type="text" name="archers[]" required placeholder="Nombre">
-                    <button class="standard-button" id="newInput">Agregar arquero</button>
-                    <button class="standard-button" id="submit">¡Empezar!</button>
-                </form>
-            </article>
-        </section>
+      <section id="title">
+        <article>
+          <h3 class="standard-title">Introducir Tiradores</h3>
+          <form method="get" id="numPlayerForm">
+            <input
+              class="standard-input"
+              type="text"
+              name="archers[]"
+              required
+              placeholder="Nombre"
+            />
+            <button class="standard-button" id="newInput">
+              Agregar arquero
+            </button>
+            <button class="standard-button" id="submit">¡Empezar!</button>
+          </form>
+        </article>
+      </section>
     </main>
     <!-- <footer>
     </footer> -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
