@@ -1,5 +1,7 @@
 <?php
+
 error_reporting(0);
+
 session_start();
 
 $index = intval($_POST['archer']);
